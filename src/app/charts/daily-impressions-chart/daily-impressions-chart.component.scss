@@ -1,0 +1,31 @@
+.chart-container {
+    max-height: 700px;
+    max-width: 1000px;
+    min-width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.chart-container > canvas {
+    width: 100%;
+}
+
+.chart-buttons {
+    display: flex;
+}
+
+.chart-date-range-btn {
+    display: flex;
+    color: black;
+    background-color: white;
+    border-color: gray;
+    margin: 2px;
+
+    &.active {
+        background-color: #E6E6E6;
+    }
+}
+
+.chart-date-submit-btn {
+    margin-left: 20px;
+}

@@ -1,0 +1,13 @@
+<h1>Daily Impressions Chart</h1>
+<div class="chart-container">
+    <div class="chart-buttons">
+        <button *ngFor="let range of dateRanges" class="btn chart-date-range-btn" [ngClass]="{ 'active': range.value === selectedDateRange.value }"
+            (click)="onDateRangeChange(range)">
+            {{ range.label }}
+        </button>
+        <button *ngIf="isSubmitButtonVisible" class="btn btn-primary chart-date-submit-btn" (click)="onDateRangeSubmit()">
+            Submit
+        </button>
+    </div>
+    <canvas #chartCanvas></canvas>
+</div>
